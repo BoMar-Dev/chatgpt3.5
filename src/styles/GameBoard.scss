@@ -1,0 +1,35 @@
+// GameBoard.scss
+
+.game-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #e0e0e0;
+    background-image: url('card-back.png'); // Ersätt med riktig bild
+    background-size: cover;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+
+    .card-inner {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.card.flipped {
+    background-image: none; // Ta bort bakgrundsbild för uppvända kort
+    /* Extra stilar för uppvänt kort */
+}
